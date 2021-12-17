@@ -16,6 +16,7 @@
     {% endif %}
 
     {% if contacts is defined %}
+        <h1>Demandes de contacts ({{ contacts|length }})</h1>
         {% for contact in contacts %}
             <a href="{{ path('contactId', {id: contact.id}) }}">Demande de contact pour {{ contact.prenom }}</a>
         {% endfor %}
